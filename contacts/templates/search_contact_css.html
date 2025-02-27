@@ -20,14 +20,14 @@
       />
     </div>
     <div class="mb-3">
-      <label for="phone" class="form-label">Phone:</label>
+      <label for="email" class="form-label">email:</label>
       <input
         type="text"
-        id="phone"
-        name="phone"
+        id="email"
+        name="email"
         class="form-control"
-        placeholder="Enter phone number"
-        value="{{ phone_query }}"
+        placeholder="Enter email number"
+        value="{{ email_query }}"
       />
     </div>
     <button type="submit" class="btn btn-primary">Search Contact</button>
@@ -37,7 +37,7 @@
   {% if contacts %}
   <div class="mt-4">
     <h2 class="text-success">Search Results.</h2>
-    <p>Query: {{ name_query }} {{ phone_query }}</p>
+    <p>Query: {{ name_query }} {{ email_query }}</p>
     <ul class="list-group">
       {% for contact in contacts %}
       <li
@@ -63,7 +63,7 @@
               text-overflow: ellipsis;
               white-space: nowrap;
             "
-            >{{ contact.phone }}</span
+            >{{ contact.email }}</span
           >
         </div>
       </li>
@@ -77,14 +77,14 @@
         <li class="page-item">
           <a
             class="page-link"
-            href="?page=1&name={{ name_query }}&phone={{ phone_query }}"
+            href="?page=1&name={{ name_query }}&email={{ email_query }}"
             >First</a
           >
         </li>
         <li class="page-item">
           <a
             class="page-link"
-            href="?page={{ contacts.previous_page_number }}&name={{ name_query }}&phone={{ phone_query }}"
+            href="?page={{ contacts.previous_page_number }}&name={{ name_query }}&email={{ email_query }}"
             >Previous</a
           >
         </li>
@@ -100,14 +100,14 @@
         <li class="page-item">
           <a
             class="page-link"
-            href="?page={{ contacts.next_page_number }}&name={{ name_query }}&phone={{ phone_query }}"
+            href="?page={{ contacts.next_page_number }}&name={{ name_query }}&email={{ email_query }}"
             >Next</a
           >
         </li>
         <li class="page-item">
           <a
             class="page-link"
-            href="?page={{ contacts.paginator.num_pages }}&name={{ name_query }}&phone={{ phone_query }}"
+            href="?page={{ contacts.paginator.num_pages }}&name={{ name_query }}&email={{ email_query }}"
             >Last</a
           >
         </li>

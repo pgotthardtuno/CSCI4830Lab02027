@@ -16,7 +16,7 @@ def generate_contacts(count=100):
     """Generates and inserts 'count' number of contacts into the database."""
     try:
         sample_contacts = [
-            Contact(name=fake.name(), phone=fake.numerify(text="###-###-####"))  # Ensures correct phone format
+            Contact(name=fake.name(), email=fake.email())  # Ensures correct phone format phone=fake.numerify(text="###-###-####")
             for _ in range(count)
         ]
 
